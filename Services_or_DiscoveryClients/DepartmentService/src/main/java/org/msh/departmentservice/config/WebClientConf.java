@@ -37,10 +37,6 @@ public class WebClientConf {
     public WebClient employeeWebClient() {
 //        return WebClient.builder()
         return webClient()
-                // 1- use lb:// protocol instead of http://
-                // .baseUrl("lb://employeeservice") // service name in Eureka
-                // 2- in .properties file of clients add: eureka.instance.preferIpAddress=true and eureka.instance.prefer-ip-address=true
-//                .baseUrl("http://employeeservice") // service name in Eureka
                 .baseUrl("http://employee-service") // service name in Eureka
                 .filter(filterFunction) // enables load-balanced discovery
                 .build();
