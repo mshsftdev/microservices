@@ -1,6 +1,7 @@
 package org.msh.departmentservice.controller;
 
 import org.msh.departmentservice.client.EmployeeClnt;
+import org.msh.departmentservice.client.EmployeeFeignClnt;
 import org.msh.departmentservice.model.Department;
 import org.msh.departmentservice.repository.DepartmentRepo;
 import org.slf4j.LoggerFactory;
@@ -17,12 +18,14 @@ public class DepartmentCtrl {
 
     private final DepartmentRepo departmentRepo;
     private final EmployeeClnt employeeClnt;
+    private final EmployeeFeignClnt employeeFeignClnt;
     private final static Logger LOGGER = (Logger) LoggerFactory.getLogger(DepartmentCtrl.class);
 
     @Autowired
-    public DepartmentCtrl(DepartmentRepo departmentRepo, EmployeeClnt employeeClnt) {
+    public DepartmentCtrl(DepartmentRepo departmentRepo, EmployeeClnt employeeClnt, EmployeeFeignClnt employeeFeignClnt) {
         this.departmentRepo = departmentRepo;
         this.employeeClnt = employeeClnt;
+        this.employeeFeignClnt = employeeFeignClnt;
     }
 
     @PostMapping("/add")
@@ -39,6 +42,16 @@ public class DepartmentCtrl {
         return departmentRepo.findAll();
     }
 
+    @GetMapping("/get/{id}")
+    public Department findById(@PathVariable Long id)
+    {
+        LOGGER.info(String.format("Department findById: {}", id));
+        return departmentRepo.findById(id);
+    }
+
+
+
+
     @GetMapping("/get/allWithEmployees")
     public List<Department> findAllWithEmployees()
     {
@@ -50,11 +63,16 @@ public class DepartmentCtrl {
         return  lst;
     }
 
-    @GetMapping("/get/{id}")
-    public Department findById(@PathVariable Long id)
+    @GetMapping("/get/allWithEmployeesUsingFeignClient")
+    public List<Department> findAllWithEmployeesUsingFeignClient()
     {
-        LOGGER.info(String.format("Department findById: {}", id));
-        return departmentRepo.findById(id);
+        LOGGER.info("Department findAllWithEmployees");
+        List<Department> lst = departmentRepo.findAll();
+        lst.forEach(d -> d.setEmployees(
+                employeeFeignClnt.findByDepartmentId(d.getId())
+        ));
+        return  lst;
     }
+
 
 }

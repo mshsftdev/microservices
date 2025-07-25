@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86d16a1f-6b8f-4199-b9c0-e8743b43c2d7" name="Changes" comment="commit" />
+    <list default="true" id="86d16a1f-6b8f-4199-b9c0-e8743b43c2d7" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/.idea/Microservices_feign_client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/src/main/java/org/msh/departmentservice/client/EmployeeFeignClnt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/readMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/src/main/java/org/msh/departmentservice/DepartmentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/src/main/java/org/msh/departmentservice/DepartmentServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/src/main/java/org/msh/departmentservice/config/WebClientConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/src/main/java/org/msh/departmentservice/config/WebClntConf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/src/main/java/org/msh/departmentservice/controller/DepartmentCtrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Services_or_DiscoveryClients/DepartmentService/src/main/java/org/msh/departmentservice/controller/DepartmentCtrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readMe.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +34,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/mshsftdev/microservices",
+    "url": "https://github.com/mshsftdev/microservices_feign_client",
     "accountId": "8e895bfd-0302-4c96-a52c-6b236ed525e9"
   }
 }]]></component>
@@ -69,7 +81,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Files/Programming/class/Microservices/ApiGateway/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Files/Programming/class/Microservices_feign_client&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -92,6 +104,9 @@
       <recent name="D:\Files\Programming\class\Microservices\ConfigServer\src\main\resources\config" />
       <recent name="D:\Files\Programming\class\Microservices\configServer\src\main\resources\config" />
       <recent name="D:\Files\Programming\class\MicroService\2_add config server\configServer\src\main\resources\config" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.msh.departmentservice.client" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -175,7 +190,9 @@
       <workItem from="1753278018789" duration="4419000" />
       <workItem from="1753279014476" duration="5401000" />
       <workItem from="1753346230592" duration="9372000" />
-      <workItem from="1753445882082" duration="5596000" />
+      <workItem from="1753445882082" duration="6071000" />
+      <workItem from="1753464443763" duration="2101000" />
+      <workItem from="1753466765565" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -249,7 +266,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753463596584</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="commit">
+      <option name="closed" value="true" />
+      <created>1753463785215</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753463785215</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

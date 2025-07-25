@@ -3,7 +3,6 @@ package org.msh.departmentservice.config;
 import io.netty.resolver.DefaultAddressResolverGroup;
 import org.msh.departmentservice.client.EmployeeClnt;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.client.loadbalancer.reactive.LoadBalancedExchangeFilterFunction;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,12 +13,12 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 import reactor.netty.http.client.HttpClient;
 
 @Configuration
-public class WebClientConf {
+public class WebClntConf {
 
     private final LoadBalancedExchangeFilterFunction filterFunction;
 
     @Autowired
-    public WebClientConf(LoadBalancedExchangeFilterFunction filterFunction) {
+    public WebClntConf(LoadBalancedExchangeFilterFunction filterFunction) {
         this.filterFunction = filterFunction;
     }
 
