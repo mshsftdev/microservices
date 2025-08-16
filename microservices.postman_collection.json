@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "6afc57ec-8530-41df-9f69-87b0edd5a69b",
+		"name": "microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "47222509",
+		"_collection_link": "https://mshsftdev-6700760.postman.co/workspace/mshsftdev's-Workspace~0cee191f-2c19-433c-8cee-556a9af8080b/collection/47222509-6afc57ec-8530-41df-9f69-87b0edd5a69b?action=share&source=collection_link&creator=47222509"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/employee/add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\":\"1\"\r\n        , \"name\":\"e1\"\r\n        , \"departmentId\":\"1\"\r\n        , \"age\":\"11\"\r\n        , \"position\":\"junior\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8060/employee/add"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/department/add",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"IT\",\r\n    \"employees\": []\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8060/department/add"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/employee/get/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8060/employee/get/all"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/department/get/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8060/department/get/all"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/department/get/allWithEmployees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8060/department/get/allWithEmployees"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/department/get/allWithEmployeesUsingFeignClient",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8060/department/get/allWithEmployeesUsingFeignClient"
+			},
+			"response": []
+		}
+	]
+}
